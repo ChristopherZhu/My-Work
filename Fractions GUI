@@ -1,0 +1,92 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Exercise207FractionsGUI extends JFrame implements ActionListener
+{
+	private JTextArea num1, den1, num2, den2, resultNum, resultDen;
+	private JButton add, subtract, multiply, divide, compare;
+	
+	public Exercise207FractionsGUI()
+	{
+		setSize(500,500);
+		setLayout(null);
+		setResizable(false);
+		
+		Container c = getContentPane();
+		c.setBackground(new Color(0, 90, 150));
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		JLabel title = new JLabel();
+		title.setBounds(75, 20, 450, 20);
+		title.setForeground(Color.WHITE);
+		title.setFont(new Font ("Copperplate Gothic Bold",Font.PLAIN,26));
+		title.setText("Fractions Calculator");
+		title.setVisible(true);
+		add(title);
+		
+		JLabel f1 = new JLabel();
+		f1.setBounds(40, 70, 150, 20);
+		f1.setForeground(Color.WHITE);
+		f1.setFont(new Font ("Georgia",Font.PLAIN,16));
+		f1.setText("Fraction 1");
+		f1.setVisible(true);
+		add(f1);
+		
+		
+		num1 = new JTextArea();
+		num1.setBounds(50,100,50,50);
+		num1.setHorizontalAllingment();
+		num1.setFont(new Font ("Times New Roman",Font.PLAIN,30));
+		add(num1);
+		
+		den1 = new JTextArea();
+		den1.setBounds(50,200,50,50);
+		den1.setFont(new Font ("Georgia",Font.PLAIN,14));
+		add(den1);
+		
+		num2 = new JTextArea();
+		num2.setBounds(150,100,50,50);
+		num2.setFont(new Font ("Georgia",Font.PLAIN,14));
+		add(num2);
+		
+		den2 = new JTextArea();
+		den2.setBounds(150,200,50,50);
+		den2.setFont(new Font ("Georgia",Font.PLAIN,14));
+		add(den2);
+		
+		resultNum = new JTextArea();
+		resultNum.setBounds(300,100,50,50);
+		resultNum.setFont(new Font ("Georgia",Font.PLAIN,14));
+		add(resultNum);
+		
+		resultDen = new JTextArea();
+		resultDen.setBounds(300,200,50,50);
+		resultDen.setFont(new Font ("Georgia",Font.PLAIN,14));
+		add(resultDen);
+		
+		add = new JButton();
+		add.addActionListener(this);
+		add.setBounds(50,400,30,30);
+		add.setForeground(Color.WHITE);
+		add.setFont(new Font ("Georgia",Font.BOLD,14));
+		add.setText("+");
+		add.setBackground(new Color(0,200,75));
+		add.setOpaque(true);
+		add.setBorder(null);
+		add(add);
+		
+		setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent keyPressed)
+	{
+		if (keyPressed.getSource() == add)
+		{
+			
+		}
+	}
+}
